@@ -1,4 +1,3 @@
-
 # Iterate through all checklist subdirectories and perform BirdNet identifications
 # NOTE This must be run within the BirdNET directory or the library won't work...
 # Parameters: 
@@ -13,5 +12,3 @@ for d in $1*/ ; do
 	echo "Processing audio files in ${d}"
 	python analyze.py --i "${d}" --lat $2 --lon $3 --week $4
 done
-
-

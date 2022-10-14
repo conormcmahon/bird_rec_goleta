@@ -1,0 +1,107 @@
+checklist,common_name,best_confidence,count
+sd_02_2022_06_17,Barn Swallow,0.9997,1363
+sd_02_2022_06_17,Hooded Oriole,0.9994,996
+sd_02_2022_06_17,Bushtit,0.999,962
+sd_02_2022_06_17,House Finch,0.999,2312
+sd_02_2022_06_17,California Towhee,0.9989,1263
+sd_02_2022_06_17,Say's Phoebe,0.9983,102
+sd_02_2022_06_17,Black Phoebe,0.9981,839
+sd_02_2022_06_17,American Crow,0.9976,1151
+sd_02_2022_06_17,Cliff Swallow,0.9972,816
+sd_02_2022_06_17,Red-shouldered Hawk,0.9952,178
+sd_02_2022_06_17,Northern Mockingbird,0.9907,485
+sd_02_2022_06_17,Common Yellowthroat,0.99,500
+sd_02_2022_06_17,Mallard,0.989,552
+sd_02_2022_06_17,Oak Titmouse,0.9849,91
+sd_02_2022_06_17,Allen's Hummingbird,0.9837,153
+sd_02_2022_06_17,Lesser Goldfinch,0.9823,230
+sd_02_2022_06_17,Song Sparrow,0.9808,285
+sd_02_2022_06_17,Purple Finch,0.9617,122
+sd_02_2022_06_17,Red-winged Blackbird,0.9408,130
+sd_02_2022_06_17,Northern Rough-winged Swallow,0.9396,200
+sd_02_2022_06_17,Anna's Hummingbird,0.9375,81
+sd_02_2022_06_17,European Starling,0.9209,172
+sd_02_2022_06_17,California Thrasher,0.8898,141
+sd_02_2022_06_17,Western Kingbird,0.8747,255
+sd_02_2022_06_17,Ash-throated Flycatcher,0.8724,150
+sd_02_2022_06_17,Bullock's Oriole,0.8369,85
+sd_15_2022_06_17,Cliff Swallow,0.997,431
+sd_15_2022_06_17,Lesser Goldfinch,0.9813,130
+sd_16_2022_06_17,Cliff Swallow,0.9998,9396
+sd_16_2022_06_17,Common Yellowthroat,0.9997,1990
+sd_16_2022_06_17,Western Kingbird,0.9996,112
+sd_16_2022_06_17,Lesser Goldfinch,0.9995,4737
+sd_16_2022_06_17,Oak Titmouse,0.9993,318
+sd_16_2022_06_17,Allen's Hummingbird,0.9992,228
+sd_16_2022_06_17,California Towhee,0.9992,3315
+sd_16_2022_06_17,Western Bluebird,0.997,271
+sd_16_2022_06_17,Acorn Woodpecker,0.9968,357
+sd_16_2022_06_17,Northern Rough-winged Swallow,0.9951,969
+sd_16_2022_06_17,Pacific-slope Flycatcher,0.9932,801
+sd_16_2022_06_17,American Crow,0.9896,191
+sd_16_2022_06_17,Say's Phoebe,0.9874,146
+sd_16_2022_06_17,Nuttall's Woodpecker,0.9835,804
+sd_16_2022_06_17,Tree Swallow,0.9827,89
+sd_16_2022_06_17,House Finch,0.9615,2663
+sd_16_2022_06_17,Anna's Hummingbird,0.9605,109
+sd_16_2022_06_17,Bewick's Wren,0.9549,142
+sd_16_2022_06_17,Song Sparrow,0.9521,275
+sd_16_2022_06_17,Spotted Towhee,0.9131,149
+sd_16_2022_06_17,Lawrence's Goldfinch,0.9056,139
+sd_16_2022_06_17,Lazuli Bunting,0.8966,182
+sd_17_2022_06_17,Cliff Swallow,0.9997,10804
+sd_17_2022_06_17,Killdeer,0.9997,99
+sd_17_2022_06_17,Black Phoebe,0.9996,393
+sd_17_2022_06_17,Western Bluebird,0.9996,351
+sd_17_2022_06_17,Double-crested Cormorant,0.9983,427
+sd_17_2022_06_17,Bushtit,0.9978,124
+sd_17_2022_06_17,Common Yellowthroat,0.9962,642
+sd_17_2022_06_17,Spotted Sandpiper,0.9959,137
+sd_17_2022_06_17,Lesser Goldfinch,0.9891,1339
+sd_17_2022_06_17,House Finch,0.9819,1565
+sd_17_2022_06_17,California Towhee,0.9732,625
+sd_17_2022_06_17,Northern Rough-winged Swallow,0.9656,1015
+sd_17_2022_06_17,House Sparrow,0.9637,3038
+sd_17_2022_06_17,American Crow,0.9538,251
+sd_17_2022_06_17,Song Sparrow,0.9132,228
+sd_17_2022_06_17,Lawrence's Goldfinch,0.9068,151
+sd_17_2022_06_17,Bell's Sparrow,0.8619,106
+sd_17_2022_06_17,Rock Wren,0.8246,81
+sd_17_2022_06_17,Violet-green Swallow,0.8096,130
+sd_18_2022_06_17,Bushtit,0.999,604
+sd_18_2022_06_17,Cliff Swallow,0.9984,1009
+sd_18_2022_06_17,Common Yellowthroat,0.9982,3169
+sd_18_2022_06_17,Oak Titmouse,0.9982,195
+sd_18_2022_06_17,Western Bluebird,0.9982,195
+sd_18_2022_06_17,House Finch,0.9965,4622
+sd_18_2022_06_17,California Towhee,0.9962,1799
+sd_18_2022_06_17,Killdeer,0.9958,454
+sd_18_2022_06_17,Hooded Oriole,0.9955,359
+sd_18_2022_06_17,Black Phoebe,0.9943,265
+sd_18_2022_06_17,Anna's Hummingbird,0.9928,150
+sd_18_2022_06_17,Black-necked Stilt,0.9922,278
+sd_18_2022_06_17,American Crow,0.9882,1557
+sd_18_2022_06_17,Lesser Goldfinch,0.9878,345
+sd_18_2022_06_17,White-breasted Nuthatch,0.9861,81
+sd_18_2022_06_17,Northern Rough-winged Swallow,0.9795,247
+sd_18_2022_06_17,Greater Yellowlegs,0.9791,122
+sd_18_2022_06_17,Orange-crowned Warbler,0.978,168
+sd_18_2022_06_17,Bewick's Wren,0.9776,376
+sd_18_2022_06_17,Song Sparrow,0.976,395
+sd_18_2022_06_17,Mallard,0.971,93
+sd_18_2022_06_17,Osprey,0.9704,168
+sd_18_2022_06_17,Purple Finch,0.9684,167
+sd_18_2022_06_17,Black-crowned Night-Heron,0.9614,146
+sd_18_2022_06_17,White-crowned Sparrow,0.9555,2187
+sd_18_2022_06_17,Allen's Hummingbird,0.9541,123
+sd_18_2022_06_17,House Sparrow,0.9469,3597
+sd_18_2022_06_17,Red-tailed Hawk,0.945,97
+sd_18_2022_06_17,Double-crested Cormorant,0.9416,133
+sd_18_2022_06_17,Northern Mockingbird,0.9406,448
+sd_18_2022_06_17,Spotted Sandpiper,0.9258,229
+sd_18_2022_06_17,Lazuli Bunting,0.9211,220
+sd_18_2022_06_17,California Quail,0.9121,204
+sd_18_2022_06_17,Semipalmated Plover,0.9058,88
+sd_18_2022_06_17,Tree Swallow,0.8425,330
+sd_18_2022_06_17,Bell's Sparrow,0.8291,96
+sd_18_2022_06_17,Rock Wren,0.8002,1007

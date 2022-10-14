@@ -1,0 +1,42 @@
+common_name,total,presence_absolute,presence_rate,best_confidence,unlikely
+Cliff Swallow,22456,5,1,0.9998,
+House Finch,11182,5,1,0.999,
+House Sparrow,7041,4,0.8,0.9637,
+California Towhee,7040,5,1,0.9992,
+Lesser Goldfinch,6781,5,1,0.9995,
+Common Yellowthroat,6301,4,0.8,0.9997,
+American Crow,3150,4,0.8,0.9976,
+White-crowned Sparrow,2974,3,0.6,0.9555,x
+Northern Rough-winged Swallow,2482,5,1,0.9951,
+Barn Swallow,1887,4,0.8,0.9997,
+Bushtit,1795,5,1,0.999,
+Black Phoebe,1576,4,0.8,0.9996,
+Nuttall's Woodpecker,1494,4,0.8,0.9835,
+Hooded Oriole,1451,4,0.8,0.9994,
+Song Sparrow,1183,4,0.8,0.9808,
+Rock Wren,1088,2,0.4,0.8246,x
+Northern Mockingbird,933,2,0.4,0.9907,
+Western Bluebird,884,4,0.8,0.9996,
+Pacific-slope Flycatcher,801,1,0.2,0.9932,
+Mallard,676,4,0.8,0.989,
+Tree Swallow,667,5,1,0.983,
+Double-crested Cormorant,652,4,0.8,0.9983,
+Oak Titmouse,620,4,0.8,0.9993,
+Killdeer,553,2,0.4,0.9997,
+Bewick's Wren,540,3,0.6,0.9776,
+Violet-green Swallow,536,3,0.6,0.8096,x
+Allen's Hummingbird,509,4,0.8,0.9992,
+Western Kingbird,461,5,1,0.9996,
+Lazuli Bunting,432,4,0.8,0.9211,x
+Purple Finch,432,3,0.6,0.9684,
+Anna's Hummingbird,402,4,0.8,0.9953,
+Lawrence's Goldfinch,401,4,0.8,0.9567,x
+Spotted Sandpiper,395,4,0.8,0.9959,x
+Acorn Woodpecker,382,3,0.6,0.9968,
+California Quail,350,2,0.4,0.9121,x
+Say's Phoebe,321,4,0.8,0.9983,
+Black-necked Stilt,291,3,0.6,0.9955,
+Ash-throated Flycatcher,189,2,0.4,0.8724,
+Orange-crowned Warbler,168,1,0.2,0.978,
+Spotted Towhee,166,2,0.4,0.9329,
+Semipalmated Plover,88,1,0.2,0.9058,x

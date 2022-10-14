@@ -1,0 +1,119 @@
+checklist,common_name,best_confidence,count
+sd_01_2022_06_27,California Scrub-Jay,1,1267
+sd_01_2022_06_27,Oak Titmouse,0.9999,6009
+sd_01_2022_06_27,Pacific-slope Flycatcher,0.9999,3841
+sd_01_2022_06_27,Red-shouldered Hawk,0.9999,9321
+sd_01_2022_06_27,Bewick's Wren,0.9998,2070
+sd_01_2022_06_27,Bushtit,0.9997,959
+sd_01_2022_06_27,Spotted Towhee,0.9997,7652
+sd_01_2022_06_27,Nuttall's Woodpecker,0.9996,551
+sd_01_2022_06_27,Western Bluebird,0.9996,327
+sd_01_2022_06_27,Acorn Woodpecker,0.9995,2522
+sd_01_2022_06_27,Black Phoebe,0.9974,258
+sd_01_2022_06_27,White-breasted Nuthatch,0.9969,1301
+sd_01_2022_06_27,Anna's Hummingbird,0.9949,179
+sd_01_2022_06_27,American Crow,0.9942,3082
+sd_01_2022_06_27,Wrentit,0.9864,367
+sd_01_2022_06_27,Red-tailed Hawk,0.9852,128
+sd_01_2022_06_27,Orange-crowned Warbler,0.9784,164
+sd_01_2022_06_27,Dark-eyed Junco,0.9711,301
+sd_01_2022_06_27,House Wren,0.9621,115
+sd_01_2022_06_27,House Finch,0.9548,455
+sd_01_2022_06_27,California Towhee,0.8648,457
+sd_01_2022_06_27,Lesser Goldfinch,0.8502,82
+sd_01_2022_06_27,Cooper's Hawk,0.8355,91
+sd_01_2022_06_27,Steller's Jay,0.8049,119
+sd_08_2022_06_27,California Scrub-Jay,1,686
+sd_08_2022_06_27,Oak Titmouse,1,3697
+sd_08_2022_06_27,Red-shouldered Hawk,0.9999,3399
+sd_08_2022_06_27,American Crow,0.9996,1373
+sd_08_2022_06_27,Acorn Woodpecker,0.9991,586
+sd_08_2022_06_27,Nuttall's Woodpecker,0.9987,162
+sd_08_2022_06_27,Pacific-slope Flycatcher,0.9946,319
+sd_08_2022_06_27,White-breasted Nuthatch,0.9944,280
+sd_08_2022_06_27,Spotted Towhee,0.9943,2723
+sd_08_2022_06_27,Bewick's Wren,0.9921,216
+sd_08_2022_06_27,Wrentit,0.9898,243
+sd_08_2022_06_27,Bushtit,0.985,202
+sd_08_2022_06_27,House Finch,0.9759,165
+sd_08_2022_06_27,Dark-eyed Junco,0.9256,168
+sd_08_2022_06_27,California Towhee,0.9071,225
+sd_08_2022_06_27,Double-crested Cormorant,0.8498,111
+sd_15_2022_06_27,Cliff Swallow,0.997,431
+sd_15_2022_06_27,Lesser Goldfinch,0.9813,130
+sd_16_2022_06_27,Cooper's Hawk,1,15199
+sd_16_2022_06_27,Oak Titmouse,1,2404
+sd_16_2022_06_27,Acorn Woodpecker,0.9999,2058
+sd_16_2022_06_27,Pacific-slope Flycatcher,0.9998,5067
+sd_16_2022_06_27,California Scrub-Jay,0.9997,1047
+sd_16_2022_06_27,Black Phoebe,0.9994,1071
+sd_16_2022_06_27,American Crow,0.9981,2922
+sd_16_2022_06_27,Red-shouldered Hawk,0.9973,480
+sd_16_2022_06_27,Western Bluebird,0.9971,140
+sd_16_2022_06_27,Orange-crowned Warbler,0.9944,750
+sd_16_2022_06_27,Dark-eyed Junco,0.9942,1704
+sd_16_2022_06_27,Bewick's Wren,0.9924,493
+sd_16_2022_06_27,Spotted Towhee,0.9884,494
+sd_16_2022_06_27,Nuttall's Woodpecker,0.9821,165
+sd_16_2022_06_27,Bushtit,0.9791,155
+sd_16_2022_06_27,White-breasted Nuthatch,0.977,546
+sd_16_2022_06_27,Lesser Goldfinch,0.969,577
+sd_16_2022_06_27,House Finch,0.963,177
+sd_16_2022_06_27,Wrentit,0.9606,467
+sd_16_2022_06_27,California Quail,0.9605,103
+sd_16_2022_06_27,Wilson's Warbler,0.9481,126
+sd_16_2022_06_27,White-crowned Sparrow,0.8562,1101
+sd_16_2022_06_27,Rock Pigeon,0.8267,240
+sd_19_2022_06_27,Oak Titmouse,1,6936
+sd_19_2022_06_27,California Scrub-Jay,0.9999,1965
+sd_19_2022_06_27,Cooper's Hawk,0.9998,105
+sd_19_2022_06_27,Bushtit,0.9997,4381
+sd_19_2022_06_27,Nuttall's Woodpecker,0.9997,465
+sd_19_2022_06_27,Red-shouldered Hawk,0.9997,4822
+sd_19_2022_06_27,Acorn Woodpecker,0.9996,1491
+sd_19_2022_06_27,Pacific-slope Flycatcher,0.9995,437
+sd_19_2022_06_27,American Crow,0.9994,6481
+sd_19_2022_06_27,Band-tailed Pigeon,0.9994,182
+sd_19_2022_06_27,Spotted Towhee,0.9994,8425
+sd_19_2022_06_27,Bewick's Wren,0.9985,1571
+sd_19_2022_06_27,Black Phoebe,0.997,103
+sd_19_2022_06_27,California Towhee,0.9959,2505
+sd_19_2022_06_27,House Finch,0.9953,778
+sd_19_2022_06_27,Western Bluebird,0.9949,164
+sd_19_2022_06_27,White-breasted Nuthatch,0.9936,518
+sd_19_2022_06_27,Wrentit,0.9825,499
+sd_19_2022_06_27,Anna's Hummingbird,0.9777,284
+sd_19_2022_06_27,Dark-eyed Junco,0.9754,1290
+sd_19_2022_06_27,Northern Mockingbird,0.9707,1343
+sd_19_2022_06_27,California Thrasher,0.9591,607
+sd_19_2022_06_27,Western Tanager,0.9473,111
+sd_19_2022_06_27,Hooded Oriole,0.9039,94
+sd_19_2022_06_27,American Robin,0.8964,144
+sd_19_2022_06_27,Brown Creeper,0.891,198
+sd_28_2022_06_27,Pacific-slope Flycatcher,0.9999,12515
+sd_28_2022_06_27,Acorn Woodpecker,0.9995,864
+sd_28_2022_06_27,Oak Titmouse,0.9995,1606
+sd_28_2022_06_27,Bewick's Wren,0.9994,1654
+sd_28_2022_06_27,California Scrub-Jay,0.9991,301
+sd_28_2022_06_27,Lesser Goldfinch,0.999,8715
+sd_28_2022_06_27,Spotted Towhee,0.9989,5258
+sd_28_2022_06_27,Cooper's Hawk,0.9987,659
+sd_28_2022_06_27,Allen's Hummingbird,0.9978,375
+sd_28_2022_06_27,Nuttall's Woodpecker,0.9977,959
+sd_28_2022_06_27,Black Phoebe,0.9975,766
+sd_28_2022_06_27,Bushtit,0.9972,423
+sd_28_2022_06_27,White-breasted Nuthatch,0.997,266
+sd_28_2022_06_27,Dark-eyed Junco,0.9966,1505
+sd_28_2022_06_27,Yellow Warbler,0.9962,3506
+sd_28_2022_06_27,Wrentit,0.9932,203
+sd_28_2022_06_27,California Towhee,0.98740000000000006,999
+sd_28_2022_06_27,Wilson's Warbler,0.9757,514
+sd_28_2022_06_27,Anna's Hummingbird,0.9605,243
+sd_28_2022_06_27,House Finch,0.9456,208
+sd_28_2022_06_27,Brown-headed Cowbird,0.939,181
+sd_28_2022_06_27,House Sparrow,0.9373,90
+sd_28_2022_06_27,Orange-crowned Warbler,0.9321,1147
+sd_28_2022_06_27,American Crow,0.9312,270
+sd_28_2022_06_27,Brown Creeper,0.8902,205
+sd_28_2022_06_27,California Quail,0.8724,119
+sd_28_2022_06_27,Lazuli Bunting,0.8684,251
