@@ -6,9 +6,13 @@ library(sf)
 # Superdirectory containing directories for each checklist
 #data_directory <- "D:/birdrec/data/birdrec_2022/madera_canyon/April_2022/"
 #data_directory <- "D:/birdrec/data/birdrec_2022/sedgwick_ranch/"
-#data_directory <- "D:/birdrec/data/goleta_summer_2022/sedgwick/"
 #data_directory <- "D:/birdrec/data/goleta_summer_2022/san_antonio_creek/"
-data_directory <- "D:/birdrec/bird_detections/all_combined/"
+#data_directory <- "E:/santa_clara/bird_detections/test_data_02_16_2023/"
+#data_directory <- "D:/birdrec/bird_detections/all_combined/"
+#data_directory <- "G:/Bioacoustics/SCR_2023/detections/"
+#compiled_directory <- "G:/Bioacoustics/SCR_2023/detections_compiled/"
+data_directory <- "G:/Bioacoustics/Goleta_Various/detections/"
+compiled_directory <- "G:/Bioacoustics/Goleta_Various/detections_compiled/"
 
 # Ingest a single recording from BirdNet .csv tab-delimited report
 ingestRecording <- function(filename, directory, checklist_name)
@@ -27,43 +31,38 @@ ingestRecording <- function(filename, directory, checklist_name)
 # Process all recording files associated with a single checklist directory
 getBirdData <- function(checklist)
 {
-  checklist_directory <- paste(data_directory,checklist,sep="/")
+  checklist_directory <- paste(data_directory,checklist,sep="")
   files <- list.files(path=checklist_directory)
   csv_files <- files[grepl(".*\\.csv", files)] 
+  print(paste("Working on data from ", checklist, ", which has ", length(files), " detection files."), sep="")
 
   dataframe_list <- lapply(csv_files, ingestRecording, directory=checklist_directory, checklist_name=checklist)
   # Drop any empty dataframes (no birds detected)
   dataframe_list <- dataframe_list[lapply(dataframe_list, nrow) > 0]
   # Convert list of dataframes to one dataframe
-  bind_rows(dataframe_list)
+  output_df <- bind_rows(dataframe_list)
+  write_csv(output_df, paste(compiled_directory,"/",checklist,".csv",sep=""))
+  return(output_df)
 }
 # Get all checklist IDs within data_directory
 checklists <- list.files(path=data_directory)
-# Drop any .txt readme or config files
-checklists <- checklists[(1:length(checklists))*(1-grepl(".*\\.txt", checklists))]
+# Drop any .csv readme or config files
+checklists <- checklists[(1:length(checklists))*(1-grepl(".*\\.csv", checklists))]
 # Collect all data from files
 all_detections <- lapply(checklists, getBirdData)
 # Remove any empty checklists
-all_detections <- all_detections[(unlist(lapply(all_detections,nrow))>0)] 
+all_detections <- bind_rows(all_detections)
+write_csv(all_detections, paste(compiled_directory, "all_detections.csv", sep=""))
 
+# Summarize data - best detection confidence for each site
+all_summaries <- all_detections %>% 
+  group_by(site, common_name) %>% 
+  summarize(best_confidence=max(confidence), 
+            count=n()) %>%
+  arrange(-best_confidence) %>%
+  filter(best_confidence > 0.5)
 
-# Summarize data - best detection confidence for each checklist
-#   Function to apply for each checklist
-bestDetections <- function(detections)
-{
-  best_detection <- detections %>% 
-    group_by(common_name) %>% 
-    summarize(best_confidence=max(confidence), 
-              count=n()) %>%
-    arrange(-best_confidence) %>%
-    filter(best_confidence > 0.5)
-} 
-#   Apply the above to each checklist
-checklist_summaries <- lapply(all_detections, bestDetections)
-names(checklist_summaries) <- checklists[1:length(checklist_summaries)]
-
-all_summaries <- bind_rows(checklist_summaries, .id="checklist")
-view(all_summaries)
+view(arrange(all_summaries, common_name, site))
 
 # Get a list of all species detected with high confidence, and also
 #   total - total number of detections across all checklists
@@ -78,37 +77,46 @@ species_presence <- all_summaries %>%
   arrange(-total)
 view(species_presence)
 
+# Print out some data
+write_csv(all_summaries, "C:/Users/grad/Downloads/all_summaries.csv")
+write_csv(species_presence, "C:/Users/grad/Downloads/species_presence.csv")
+
 # Generate diurnal signal for a bird
 #   This automatically strips timestamps from filenames for SongMeter Micro and Audiomoth filenames
 #   Assumes input is a list of dataframes, with separate dataframes for each site
-getTimestampData <- function(detection_data_list)
+getTimestampData <- function(detection_data)
 {
-  getTimeStamps <- function(detection_data)
+  filenames <- detection_data$filename
+  # IF the file is a Song Meter file
+  if(TRUE)#length(grep("SMM", detection_data[1,]$filename)) > 0)
   {
-    filenames <- detection_data$filename
-    # IF the file is a Song Meter file
-    if(length(grep("SMM", detection_data[1,]$filename)) > 0)
-    {
-      timestamps <- substr(filenames, nchar(filenames)-25, nchar(filenames)-20)
-    }
-    # IF the file is NOT a SongMeter file
-    else
-    {
-      timestamps <- substr(filenames, nchar(filenames)-25, nchar(filenames)-20)
-    }
-    detection_data_mod <- detection_data
-    detection_data_mod$timestamp <- timestamps
-    detection_data_mod$hour <- as.numeric(substr(detection_data_mod$timestamp, 1,2))
-    detection_data_mod$minute <- as.numeric(substr(detection_data_mod$timestamp, 3,4))
-    detection_data_mod$second <- as.numeric(substr(detection_data_mod$timestamp, 5,6))
-    detection_data_mod$hour_fractional <- detection_data_mod$hour + detection_data_mod$minute/60 + detection_data_mod$second / 3600
-    
-    return(detection_data_mod)
+    timestamps <- substr(filenames, nchar(filenames)-25, nchar(filenames)-20)
+    dates <- substr(filenames, nchar(filenames)-34, nchar(filenames)-27)
   }
+  # IF the file is NOT a SongMeter file
+  else
+  {
+    timestamps <- substr(filenames, nchar(filenames)-25, nchar(filenames)-20)
+    dates <- substr(filenames, nchar(filenames)-34, nchar(filenames)-27)
+  }
+  detection_data_mod <- detection_data
+  # Set up time
+  detection_data_mod$timestamp <- timestamps
+  detection_data_mod$hour <- as.numeric(substr(detection_data_mod$timestamp, 1,2))
+  detection_data_mod$minute <- as.numeric(substr(detection_data_mod$timestamp, 3,4))
+  detection_data_mod$second <- as.numeric(substr(detection_data_mod$timestamp, 5,6))
+  detection_data_mod$hour_fractional <- detection_data_mod$hour + detection_data_mod$minute/60 + detection_data_mod$second / 3600
+  # Set up date
+  detection_data_mod$date <- dates
+  detection_data_mod$year <- as.numeric(substr(detection_data_mod$date, 1,4))
+  detection_data_mod$month <- as.numeric(substr(detection_data_mod$date, 5,6))
+  detection_data_mod$day <- as.numeric(substr(detection_data_mod$date, 7,8))
+  detection_data_mod$yday <- lubridate::yday(paste(detection_data_mod$year,
+                                                   detection_data_mod$month,
+                                                   detection_data_mod$day,
+                                                   sep="-"))
   
-  data_list_with_stamps <- lapply(detection_data_list, getTimeStamps)
-  
-  data_out <- bind_rows(data_list_with_stamps)
+  return(detection_data_mod)
 }
 
 all_detections_timestamps <- getTimestampData(all_detections)
@@ -194,11 +202,16 @@ relevant_metadata <- (bind_rows(lapply(checklists, getChecklistMetadata)))
 relevant_metadata$checklist_string <- checklists
 
 getWetness <- function(datarow){return(relevant_metadata[relevant_metadata$checklist_string == datarow$checklist,]$wet)}
+getSiteName <- function(datarow){return(relevant_metadata[relevant_metadata$checklist_string == datarow$checklist,]$site_name)}
 all_summaries$wet <- rep(0,nrow(all_summaries))
+all_summaries$site_name <- rep("",nrow(all_summaries))
 for(ind in 1:nrow(all_summaries))
 {
   all_summaries[ind,]$wet <- getWetness(all_summaries[ind,])
+  all_summaries[ind,]$site_name <- as.character(getSiteName(all_summaries[ind,]))
 }
+all_summaries$creek <- substr(all_summaries$site_name, 1, nchar(all_summaries$site_name)-3)
+all_summaries_mc_rc <- all_summaries %>% filter(creek %in% c("MC","RC"))
 
 all_detections_timestamps$wet <- rep(NA,nrow(all_detections_timestamps))
 all_detections_timestamps$checklist <- all_detections_timestamps$site
@@ -206,6 +219,10 @@ for(ind in 1:nrow(all_detections_timestamps))
 {
   all_detections_timestamps[ind,]$wet <- getWetness(all_detections_timestamps[ind,])
 }
+
+
+# Get total volume of data collected at each point (which is proportional to total recording time):
+sum(file.info(list.files(data_directory, all.files = TRUE, recursive = TRUE))$size)
 
 
 
@@ -223,4 +240,6 @@ wiwa_sd_ids <- substr((all_summaries %>% filter(common_name == "Wilson's Warbler
 wiwa_data <- (all_summaries %>% filter(common_name == "Wilson's Warbler"))
 wiwa_data$geometry <- baron_sites[unlist(lapply(wiwa_sd_ids, function(x) which(str_detect(x, baron_sites$sd_cleaned)))),]$geometry
 st_write(wiwa_data, here::here("spatial_data","wiwa.gpkg"))
+
+
 
